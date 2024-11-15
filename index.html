@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HCI CSS Assignment</title>
+    <link rel="stylesheet" href="../CSS/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    @media screen and (max-width: 480px) {
+      .shortme {
+        background: #131313;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 130vh;
+      }
+    }
+    .popup__btn {
+      font-size: 1rem;
+      background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+      padding: 14px 32px;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      margin-top: 2rem;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.35s;
+      outline: none;
+    }
+  
+    .popup__btn a {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    .popup__btn:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: #4837ff;
+      transition: all 0.35s;
+      border-radius: 4px;
+    }
+    
+    .popup__btn:hover {
+      color: #fff;
+    }
+    
+    .popup__btn:hover:after {
+      width: 100%;
+    }
+    .popup{
+      background: rgba(0,0,0,0.6);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      display: none;
+      justify-content: topleft;
+      align-items: topleft;
+    }
+    .popup-content{
+      height: 250px;
+      width: 500px;
+      background: black;
+      padding: 20px;
+      border-radius: 5px;
+      position: relative;
+    }
+    input{
+      margin: 20px auto;
+      display: block;
+      width: 50%;
+      padding: 8px;
+      bottom: 1px solid gray;
+    }
+    .close{
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      background: #fff;
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
+      cursor: pointer;
+    }
+
+  </style>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="index.html" id="navbar__logo"><i class="fas fa-dragon"></i>LUCIANO</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="games.html" class="navbar__links">Games</a>
+          </li>
+          <li class="navbar__item">
+            <a href="education.html" class="navbar__links">Education</a>
+          </li>
+          <li class="navbar__item">
+            <a href="interests.html" class="navbar__links">Interests</a>
+          </li>
+          <li class="navbar__btn"><a href="login.html" class="button">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Upper Content -->
+    <div class="main">
+      <div class="main__container">
+        <div class="main__content">
+          <h1>ABOUT</h1>
+          <h2>ME</h2>
+          <p>What's my "Speciality"</p>
+          <button class="popup__btn" id="popup__btn"><a href="#"> CLICK ME FOR A SURPRISE ☆(ﾉ◕ヮ◕)ﾉ*</a></button>
+        </div>
+        <div class="main__img--container">
+          <img id="main__img" src="/images/profilepic.jpeg" />
+        </div>
+      </div>
+    </div>
+
+    <!-- shortme Section -->
+    <div class="shortme">
+      <h1>A Short About Me</h1>
+      <div class="shortme__container">
+        <div class="shortme__card">
+          <p>My name is Luciano and I am currently 18 years old. I am a floorball regional athlete and I enjoy doing
+            adrenaline involved activities such as sports and music. I love playing Badminton and Basketball as my sports,
+            and I play piano, violin, guitar, and bass for music. I also enjoy playing games and discussing things about same interest</p>
+          <button>P. S. my contact is down below if you want to be friends (☞ ͡ ͡° ͜ ʖ ͡ ͡°)☞</button>
+        </div>
+      </div>
+      <div>
+        <h1>I Hope You Enjoy it! ヾ(＾-＾)ノ</h1>
+    <!-- Footer Section -->
+    <div class="footer__container">
+      <div class="footer__links">
+
+      </div>
+      <section class="social__media">
+        <div class="social__media--wrap">
+          <div class="footer__logo">
+            <a href="/" id="footer__logo"><i class="fas fa-dragon"></i>LUCIANO</a>
+          </div>
+          <p class="website__rights">© LUCIANO 2024. (≧∇≦)/</p>
+          <div class="social__icons">
+            <a
+              class="social__icon--link"
+              href="/"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a
+              class="social__icon--link"
+              href="https://www.instagram.com/luciano.kozlov/"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              class="social__icon--link"
+              href="/"
+              target="_blank"
+              aria-label="Youtube"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a
+              class="social__icon--link"
+              href="/"
+              target="_blank"
+              aria-label="Twitter"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              class="social__icon--link"
+              href="https://wa.me/6282210188823"
+              target="_blank"
+              aria-label="WhatsApp"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="popup">
+      <div class="popup-content">
+        <img src="../images/close.png" class="close" alt="Close">
+        <img id="popup-image" src="../images/boom.jpg" alt="BOOM">
+      </div>
+    </div>
+    <script src="../app.js"></script>
+    <script>
+      document.getElementById("popup__btn").addEventListener("click",function(){
+        document.querySelector(".popup").style.display = "flex";
+      })
+      document.querySelector(".close").addEventListener("click",function(){
+        document.querySelector(".popup").style.display = "none";
+      })
+    </script>
+  </body>
+</html>
